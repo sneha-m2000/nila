@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import { Menu, X,Facebook, Instagram, Linkedin, Twitter, MessageCircle, Youtube } from 'lucide-react';
 import logo from '../../assets/Mental health app logo design.png'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 
 
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const navigate = useNavigate();
-
-
+    // const navigate = useNavigate();
     return (
         <header className="  bg-bg border-b border-gray-200">
             <div className=" mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +35,7 @@ const Header = () => {
                         <div className="relative">
                             {' '}
                             <button
-                                onClick={() => navigate('/experts')}
+                                // onClick={() => navigate('/experts')}
                                 className="flex items-center text-[#8A8D8F] hover:text-[#24324A] transition-colors"
                             >
                                 Experts
