@@ -127,10 +127,10 @@ export default function ExpertCard({ expert,highlightedExpertise }: Props) {
                             ))}
                         </div>
                     </div>
-
                     {/* SPEAKS */}
                     <p className="mt-1 sm:mt-2 text-[10px] sm:text-[11px] text-text-secondary">
-                        <span className="font-medium">Speaks:</span> {expert.languages ?? 'English, Hindi'}
+                        <span className="font-medium text-text-main">Speaks:</span>{' '}
+                        {expert.languages?.join(', ') || 'English, Hindi, Malayalam, Tamil'}
                     </p>
                 </div>
 
