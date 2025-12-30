@@ -142,7 +142,7 @@ export default function ExpertCard({ expert,highlightedExpertise }: Props) {
                             onClick={() => setMode('online')}
                             className={`px-4 sm:px-6 py-1 rounded-xl transition-all ${
                                 mode === 'online'
-                                    ? 'bg-white text-primary border border-primary shadow-sm'
+                                    ? 'bg-white text-primary border border-primary font-bold'
                                     : 'text-text-secondary'
                             }`}
                         >
@@ -153,7 +153,7 @@ export default function ExpertCard({ expert,highlightedExpertise }: Props) {
                             onClick={() => setMode('inperson')}
                             className={`px-4 sm:px-6 py-1 rounded-xl transition-all ${
                                 mode === 'inperson'
-                                    ? 'bg-white text-primary border border-primary shadow-sm'
+                                    ? 'bg-white text-primary border border-primary font-bold'
                                     : 'text-text-secondary'
                             }`}
                         >
@@ -162,7 +162,7 @@ export default function ExpertCard({ expert,highlightedExpertise }: Props) {
                     </div>
 
                     {/* SLOT INFO */}
-                    <div className="text-[10px] sm:text-[11px] text-text-secondary space-y-1">
+                    <div className="text-sm font-bold sm:text-[11px] text-text-secondary space-y-1">
                         <div className="flex items-center gap-1">
                             <Smartphone size={14} className="text-primary" />
                             <span>{mode === 'online' ? 'Video consultation' : 'In-person session'}</span>
@@ -170,7 +170,7 @@ export default function ExpertCard({ expert,highlightedExpertise }: Props) {
 
                         <div>
                             {mode === 'online' ? 'Next online slot:' : 'Next in-person slot:'}{' '}
-                            <span className="text-primary font-medium">{expert.nextSlot ?? 'Today, 06:30 PM'}</span>
+                            <span className="text-primary font-bold">{expert.nextSlot ?? 'Today, 06:30 PM'}</span>
                         </div>
                     </div>
 
