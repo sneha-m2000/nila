@@ -192,20 +192,6 @@ export default function SelectCentreModal({ open, onClose, onApply }: Props) {
                     >
                         CLEAR ALL
                     </button>
-
-                    {/* <button
-                        disabled={!selected}
-                        className={`
-                            px-5 py-2 rounded-full text-xs font-medium transition
-                            ${
-                                selected
-                                    ? 'bg-primary text-white hover:bg-primary-hover'
-                                    : 'bg-gray-300 text-white cursor-not-allowed'
-                            }
-                        `}
-                    >
-                        SELECT
-                    </button> */}
                     <button
                         disabled={totalSelected === 0}
                         onClick={() => {

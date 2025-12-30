@@ -127,18 +127,25 @@ export default function ExpertiseFilterModal({ open, onClose, initialCategory, o
                 </div>
 
                 {/* FOOTER */}
-                <div className="px-6 py-4 border-t flex justify-between shrink-0">
-                    <button onClick={clearAll} className="text-xs border px-5 py-2 rounded-full">
-                        Clear All
+                <div className="mt-5 flex items-center justify-between px-6 pb-6 pt-4 shrink-0 border-t">
+                    <button onClick={clearAll} className="text-xs font-medium text-text-secondary hover:text-gray-900">
+                        CLEAR ALL
                     </button>
+
                     <button
                         disabled={selectedValues.length === 0}
                         onClick={() => {
                             onApply(selectedCategory, selectedValues.length, selectedValues);
                             onClose();
                         }}
+                        className={`px-5 py-2 rounded-full text-xs font-medium transition
+        ${
+            selectedValues.length
+                ? 'bg-primary text-white hover:bg-primary-hover'
+                : 'bg-gray-300 text-white cursor-not-allowed'
+        }`}
                     >
-                        Apply Filter
+                        SELECT
                     </button>
                 </div>
             </div>
