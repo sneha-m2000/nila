@@ -7,6 +7,7 @@ interface Props {
     onClose: () => void;
     initialCategory: FilterCategory;
     onApply: (category: FilterCategory, count: number, values: string[]) => void;
+    onClearAll: () => void;
 }
 
 
@@ -28,9 +29,19 @@ export default function ExpertiseFilterModal({ open, onClose, initialCategory, o
         setSelectedValues((prev) => (prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item]));
     };
 
-    const clearAll = () => {
+    // const clearAll = () => {
+    //     setSelectedValues([]);
+    //     setSearchQuery('');
+    //     onClearAll(); // 🔥 notify parent
+    //     onClose();
+    // };
+    const clearCategory = () => {
         setSelectedValues([]);
         setSearchQuery('');
+
+        // 🔥 clear only current category
+        onApply(selectedCategory, 0, []);
+        onClose();
     };
 
     const filteredList = filterData[selectedCategory].filter((item) =>
@@ -128,10 +139,13 @@ export default function ExpertiseFilterModal({ open, onClose, initialCategory, o
 
                 {/* FOOTER */}
                 <div className="mt-5 flex items-center justify-between px-6 pb-6 pt-4 shrink-0 border-t">
-                    <button onClick={clearAll} className="text-xs font-medium text-text-secondary hover:text-gray-900">
+                    {/* <button onClick={clearAll} className="text-xs font-medium text-text-secondary hover:text-gray-900"> */}
+                    <button
+                        onClick={clearCategory}
+                        className="text-xs font-medium text-text-secondary hover:text-gray-900"
+                    >
                         CLEAR ALL
                     </button>
-
                     <button
                         disabled={selectedValues.length === 0}
                         onClick={() => {

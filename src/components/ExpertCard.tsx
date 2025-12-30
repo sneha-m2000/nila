@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import VideoModal from './ui/VedioModal';
 import { Smartphone } from 'lucide-react';
-// import profileImage from '../assets/expertdp.jpg';
 
 interface Props {
     expert: {
@@ -10,7 +9,7 @@ interface Props {
         price: string;
         videoId: string;
         expertise: string[];
-        languages?: string;
+        languages?: string[];
         nextSlot?: string;
         profileImage: string;
     };

@@ -8,6 +8,8 @@ export const experts = [
         videoId: 'dQw4w9WgXcQ',
         profileImage: expertDp,
         expertise: ['Depression', 'Anger management', 'Self improvement'],
+        languages: ['English', 'Hindi', 'Gujarati'],
+        gender: 'Female',
     },
     {
         name: 'Manya Girdher',
@@ -16,6 +18,8 @@ export const experts = [
         videoId: '9bZkp7q19f0',
         profileImage: expertDp,
         expertise: ['Overthinking', 'General well-being', 'Work concerns'],
+        languages: ['English', 'Tamil', 'Malayalam'],
+        gender: 'Female',
     },
     {
         name: 'Ananya Verma',
@@ -24,6 +28,8 @@ export const experts = [
         videoId: 'l482T0yNkeo',
         profileImage: expertDp,
         expertise: ['Anxiety', 'Trauma care', 'Emotional balance'],
+        languages: ['English', 'Hindi', 'Punjabi'],
+        gender: 'Female',
     },
     {
         name: 'Rohit Malhotra',
@@ -32,5 +38,7 @@ export const experts = [
         videoId: 'RgKAFK5djSk',
         profileImage: expertDp,
         expertise: ['Relationship issues', 'Self growth', 'Confidence'],
+        languages: ['English', 'Hindi', 'Marathi'],
+        gender:'Male'
     },
 ];
